@@ -22,5 +22,9 @@ namespace WebApplication_DRUGSTORE.Data
 
         public DbSet<WebApplication_DRUGSTORE.Models.Category> Category { get; set; }
 
+        public DbSet<WebApplication_DRUGSTORE.Models.Member> Member { get; set; }
+
+        public DbSet<WebApplication_DRUGSTORE.Models.Purchase> Purchase { get; set; }
+
     }
 }
