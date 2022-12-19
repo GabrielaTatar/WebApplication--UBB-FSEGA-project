@@ -30,14 +30,14 @@ namespace WebApplication_DRUGSTORE.Pages.Purchases
                 return NotFound();
             }
 
-            var purchase =  await _context.Purchase.FirstOrDefaultAsync(m => m.ID == id);
+            var purchase =  await _context.Purchase.Include(b => b.Member).Include(b => b.Product).FirstOrDefaultAsync(m => m.ID == id);
             if (purchase == null)
             {
                 return NotFound();
             }
             Purchase = purchase;
-           ViewData["MemberID"] = new SelectList(_context.Member, "ID", "ID");
-           ViewData["ProductID"] = new SelectList(_context.Product, "ID", "ID");
+           ViewData["MemberID"] = new SelectList(_context.Member, "ID", "FullName");
+           ViewData["ProductID"] = new SelectList(_context.Product, "ID", "Title");
             return Page();
         }
 

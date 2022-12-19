@@ -56,6 +56,35 @@ namespace WebApplication_DRUGSTORE.Migrations
                     b.ToTable("Category");
                 });
 
+            modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Member", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<string>("Adress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Member");
+                });
+
             modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Product", b =>
                 {
                     b.Property<int>("ID")
@@ -110,6 +139,32 @@ namespace WebApplication_DRUGSTORE.Migrations
                     b.HasIndex("ProductID");
 
                     b.ToTable("ProductCategory");
+                });
+
+            modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Purchase", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<int?>("MemberID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("PurchaseDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("MemberID");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("Purchase");
                 });
 
             modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Review", b =>
@@ -167,6 +222,21 @@ namespace WebApplication_DRUGSTORE.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Purchase", b =>
+                {
+                    b.HasOne("WebApplication_DRUGSTORE.Models.Member", "Member")
+                        .WithMany("Purchases")
+                        .HasForeignKey("MemberID");
+
+                    b.HasOne("WebApplication_DRUGSTORE.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductID");
+
+                    b.Navigation("Member");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Brand", b =>
                 {
                     b.Navigation("Products");
@@ -175,6 +245,11 @@ namespace WebApplication_DRUGSTORE.Migrations
             modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Category", b =>
                 {
                     b.Navigation("ProductCategories");
+                });
+
+            modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Member", b =>
+                {
+                    b.Navigation("Purchases");
                 });
 
             modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Product", b =>

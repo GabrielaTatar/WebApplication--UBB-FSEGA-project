@@ -29,7 +29,7 @@ namespace WebApplication_DRUGSTORE.Pages.Purchases
                 return NotFound();
             }
 
-            var purchase = await _context.Purchase.FirstOrDefaultAsync(m => m.ID == id);
+            var purchase = await _context.Purchase.Include(b => b.Member).Include(b => b.Product).FirstOrDefaultAsync(m => m.ID == id);
 
             if (purchase == null)
             {
