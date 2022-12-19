@@ -28,7 +28,8 @@ namespace WebApplication_DRUGSTORE.Pages.Products
                 return NotFound();
             }
 
-            var product = await _context.Product.FirstOrDefaultAsync(m => m.ID == id);
+            var product = await _context.Product.Include(b => b.Brand).Include(b => b.Review).AsNoTracking().FirstOrDefaultAsync(m => m.ID == id);
+
             if (product == null)
             {
                 return NotFound();

@@ -10023,11 +10023,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Medii de programare\\WebApplication_DRUGSTORE\\WebApplication_DRUGSTORE\\WebApplication_DRUGSTORE.csproj",
+      "projectUniqueName": "C:\\Medii de programare\\final\\WebApplication_DRUGSTORE.csproj",
       "projectName": "WebApplication_DRUGSTORE",
-      "projectPath": "C:\\Medii de programare\\WebApplication_DRUGSTORE\\WebApplication_DRUGSTORE\\WebApplication_DRUGSTORE.csproj",
+      "projectPath": "C:\\Medii de programare\\final\\WebApplication_DRUGSTORE.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Medii de programare\\WebApplication_DRUGSTORE\\WebApplication_DRUGSTORE\\obj\\",
+      "outputPath": "C:\\Medii de programare\\final\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

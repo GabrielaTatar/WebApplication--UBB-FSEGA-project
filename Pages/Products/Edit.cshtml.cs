@@ -11,7 +11,7 @@ using WebApplication_DRUGSTORE.Models;
 
 namespace WebApplication_DRUGSTORE.Pages.Products
 {
-    public class EditModel : PageModel
+    public class EditModel : ProductCategoriesPageModel
     {
         private readonly WebApplication_DRUGSTORE.Data.WebApplication_DRUGSTOREContext _context;
 
@@ -25,57 +25,73 @@ namespace WebApplication_DRUGSTORE.Pages.Products
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Product == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var product =  await _context.Product.FirstOrDefaultAsync(m => m.ID == id);
-            if (product == null)
+            Product = await _context.Product
+                .Include(b => b.Brand)
+                .Include(b => b.Review)
+                .Include(b => b.ProductCategories).ThenInclude(b => b.Category)
+                .Include(b => b.Review)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.ID == id);
+
+            if (Product == null)
             {
                 return NotFound();
             }
-            Product = product;
+
+            PopulateAssignedCategoryData(_context, Product);
+
+            var reviewList = _context.Review.Select(x => new
+            {
+                x.ID,
+                FullReview = x.Comment + " " + x.Stars
+            });
 
             ViewData["BrandID"] = new SelectList(_context.Set<Brand>(), "ID", "BrandName");
-            ViewData["ReviewID"] = new SelectList(_context.Set<Review>(), "ID", "Stars");
+            ViewData["ReviewID"] = new SelectList(_context.Set<Review>(), "ID", "FullReview");
 
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(int? id, string[] selectedCategories)
         {
-            if (!ModelState.IsValid)
             {
-                return Page();
-            }
-
-            _context.Attach(Product).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProductExists(Product.ID))
+                if (id == null)
                 {
                     return NotFound();
                 }
-                else
+
+                var productToUpdate = await _context.Product
+                .Include(i => i.Brand)
+                .Include(b => b.Review)
+                .Include(i => i.ProductCategories)
+                .ThenInclude(i => i.Category)
+                .Include(i => i.Review)
+                .FirstOrDefaultAsync(s => s.ID == id);
+
+                if (productToUpdate == null)
                 {
-                    throw;
+                    return NotFound();
                 }
+
+                if (await TryUpdateModelAsync<Product>(productToUpdate, "Product",
+                i => i.Title, i => i.ReviewID,
+                i => i.Price, i => i.ReleaseDate, i => i.BrandID))
+                {
+                    UpdateProductCategories(_context, selectedCategories, productToUpdate);
+                    await _context.SaveChangesAsync();
+                    return RedirectToPage("./Index");
+                }
+
+                UpdateProductCategories(_context, selectedCategories, productToUpdate);
+                PopulateAssignedCategoryData(_context, productToUpdate);
+                return Page();
             }
-
-            return RedirectToPage("./Index");
-        }
-
-        private bool ProductExists(int id)
-        {
-          return _context.Product.Any(e => e.ID == id);
         }
     }
+
 }

@@ -20,5 +20,7 @@ namespace WebApplication_DRUGSTORE.Data
 
         public DbSet<WebApplication_DRUGSTORE.Models.Review> Review { get; set; }
 
+        public DbSet<WebApplication_DRUGSTORE.Models.Category> Category { get; set; }
+
     }
 }

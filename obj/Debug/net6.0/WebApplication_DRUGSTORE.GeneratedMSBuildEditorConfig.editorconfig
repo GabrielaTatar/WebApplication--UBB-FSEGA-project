@@ -9,97 +9,113 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApplication_DRUGSTORE
 build_property.RootNamespace = WebApplication_DRUGSTORE
-build_property.ProjectDir = C:\Medii de programare\WebApplication_DRUGSTORE\WebApplication_DRUGSTORE\
+build_property.ProjectDir = C:\Medii de programare\final\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Medii de programare\WebApplication_DRUGSTORE\WebApplication_DRUGSTORE
+build_property.MSBuildProjectDirectory = C:\Medii de programare\final
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Brands/Create.cshtml]
+[C:/Medii de programare/final/Pages/Brands/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJhbmRzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Brands/Delete.cshtml]
+[C:/Medii de programare/final/Pages/Brands/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJhbmRzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Brands/Details.cshtml]
+[C:/Medii de programare/final/Pages/Brands/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJhbmRzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Brands/Edit.cshtml]
+[C:/Medii de programare/final/Pages/Brands/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJhbmRzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Brands/Index.cshtml]
+[C:/Medii de programare/final/Pages/Brands/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJhbmRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Error.cshtml]
+[C:/Medii de programare/final/Pages/Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Medii de programare/final/Pages/Categories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Medii de programare/final/Pages/Categories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Medii de programare/final/Pages/Categories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Medii de programare/final/Pages/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Medii de programare/final/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Privacy.cshtml]
+[C:/Medii de programare/final/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Products/Create.cshtml]
+[C:/Medii de programare/final/Pages/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Products/Delete.cshtml]
+[C:/Medii de programare/final/Pages/Products/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Products/Details.cshtml]
+[C:/Medii de programare/final/Pages/Products/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Products/Edit.cshtml]
+[C:/Medii de programare/final/Pages/Products/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Products/Index.cshtml]
+[C:/Medii de programare/final/Pages/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Reviews/Create.cshtml]
+[C:/Medii de programare/final/Pages/Reviews/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV2aWV3c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Reviews/Delete.cshtml]
+[C:/Medii de programare/final/Pages/Reviews/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV2aWV3c1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Reviews/Details.cshtml]
+[C:/Medii de programare/final/Pages/Reviews/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV2aWV3c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Reviews/Edit.cshtml]
+[C:/Medii de programare/final/Pages/Reviews/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV2aWV3c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Reviews/Index.cshtml]
+[C:/Medii de programare/final/Pages/Reviews/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV2aWV3c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Medii de programare/final/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/_ViewImports.cshtml]
+[C:/Medii de programare/final/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/_ViewStart.cshtml]
+[C:/Medii de programare/final/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Medii de programare/WebApplication_DRUGSTORE/WebApplication_DRUGSTORE/Pages/Shared/_Layout.cshtml]
+[C:/Medii de programare/final/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-nln9o6766o

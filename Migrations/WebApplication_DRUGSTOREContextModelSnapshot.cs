@@ -39,6 +39,23 @@ namespace WebApplication_DRUGSTORE.Migrations
                     b.ToTable("Brand");
                 });
 
+            modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Category", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Category");
+                });
+
             modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Product", b =>
                 {
                     b.Property<int>("ID")
@@ -70,6 +87,29 @@ namespace WebApplication_DRUGSTORE.Migrations
                     b.HasIndex("ReviewID");
 
                     b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("WebApplication_DRUGSTORE.Models.ProductCategory", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("ProductCategory");
                 });
 
             modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Review", b =>
@@ -108,9 +148,38 @@ namespace WebApplication_DRUGSTORE.Migrations
                     b.Navigation("Review");
                 });
 
+            modelBuilder.Entity("WebApplication_DRUGSTORE.Models.ProductCategory", b =>
+                {
+                    b.HasOne("WebApplication_DRUGSTORE.Models.Category", "Category")
+                        .WithMany("ProductCategories")
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WebApplication_DRUGSTORE.Models.Product", "Product")
+                        .WithMany("ProductCategories")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Brand", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Category", b =>
+                {
+                    b.Navigation("ProductCategories");
+                });
+
+            modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Product", b =>
+                {
+                    b.Navigation("ProductCategories");
                 });
 
             modelBuilder.Entity("WebApplication_DRUGSTORE.Models.Review", b =>

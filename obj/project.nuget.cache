@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LhCbhbJOwFmSK1bz1exIVN6OF839lDihSSYQW9EjXziPJO2/0y0P/PSD24Qw/EggGBvKKV12RKmFQa+AgjUA2w==",
+  "dgSpecHash": "/BphZChiZrVqHJ0mCO1dfhfRiqEl7crt9Cdx56c5URroWDNu9YTNHZrJkTYbIa7o0NjaRMlZ4550pC7eIeKQPA==",
   "success": true,
-  "projectFilePath": "C:\\Medii de programare\\WebApplication_DRUGSTORE\\WebApplication_DRUGSTORE\\WebApplication_DRUGSTORE.csproj",
+  "projectFilePath": "C:\\Medii de programare\\final\\WebApplication_DRUGSTORE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

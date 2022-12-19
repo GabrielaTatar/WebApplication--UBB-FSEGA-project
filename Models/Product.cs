@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Policy;
+using System.Xml.Linq;
+
 
 namespace WebApplication_DRUGSTORE.Models
 {
@@ -23,5 +24,8 @@ namespace WebApplication_DRUGSTORE.Models
 
         public int?ReviewID { get; set; }
         public Review? Review { get; set; }
+
+        public ICollection<ProductCategory>? ProductCategories { get; set; }
+
     }
 }
